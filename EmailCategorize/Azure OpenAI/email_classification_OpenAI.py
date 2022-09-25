@@ -20,7 +20,7 @@ openai.api_key = "##############"
 
 ###Construct the prompt
 
-def create_prompt(categories,query_text):  
+def createPrompt(categories,query_text):  
     description=f"Classifiy the email into any one of the following categories :{categories}"
     prompt = (f"{description}\n {query_text}\n")
     return prompt
@@ -31,7 +31,7 @@ def create_prompt(categories,query_text):
 query_text=content[5]
 response = openai.Completion.create(
   engine="text-davinci-002",
-  prompt=create_prompt(categories,query_text),
+  prompt=createPrompt(categories,query_text),
   temperature=0,
   max_tokens=64,
   top_p=1,
