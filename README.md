@@ -6,6 +6,7 @@ This repo contains
   a. Direct call by providing categories
   b. Fewshot learning
 2. We have used enron emails from https://bailando.berkeley.edu/enron_email.html
-  a. Code for data processing of these files.
+  a. Download the dataset and extract.
+  b. Use the processing_emails.py file from EmailProcessing folder to create a dataframe with Content and labels.
 
   
