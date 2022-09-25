@@ -31,7 +31,7 @@ key=[key1,key2]
 
 query_text=" "
 
-def get_prompt(description,key, text, label, query_text):
+def createPrompt(description,key, text, label, query_text):
     prompttext=''
     for i in range(len(text)):
         ptext=''.join(str(key[0])+":"+str(text[i])+" "+str(key[1])+":"+ str(label[i]))
@@ -44,7 +44,7 @@ def get_prompt(description,key, text, label, query_text):
 
 response = openai.Completion.create(
   engine="text-davinci-002",
-  prompt=get_prompt(description,key, text, label, query_text),
+  prompt=createPrompt(description,key, text, label, query_text),
   temperature=0,
   max_tokens=64,
   top_p=1,
